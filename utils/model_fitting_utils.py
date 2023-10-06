@@ -226,13 +226,13 @@ class ModelFitting:
         if self.model_name == 'extra_trees':
 
             train_eval=evaluate_model(
-                y_true=self.split['y_temp'][self.var],
+                y_true=self.split['y_temp'],
                 y_pred=self.y_pred_train,
                 model_name=self.model_name + '_train'
             )
 
             test_eval=evaluate_model(
-                y_true=self.split['y_test'][self.var],
+                y_true=self.split['y_test'],
                 y_pred=self.y_pred_test,
                 model_name=self.model_name + '_test'
             )
@@ -245,13 +245,13 @@ class ModelFitting:
         elif self.model_name == 'xgboost':
 
             train_eval=evaluate_model(
-                y_true=self.split['y_temp'][self.var],
+                y_true=self.split['y_temp'],
                 y_pred=self.y_pred_train,
                 model_name=self.model_name + '_train'
             )
 
             test_eval=evaluate_model(
-                y_true=self.split['y_test'][self.var],
+                y_true=self.split['y_test'],
                 y_pred=self.y_pred_test,
                 model_name=self.model_name + '_test'
             )
