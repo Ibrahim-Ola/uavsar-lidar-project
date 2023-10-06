@@ -1,9 +1,21 @@
 import pandas as pd
-import xgboost as xgb
 from typing import Dict
 from IPython.display import display
+
+
 from utils.model_utils import evaluate_model
+from utils.pytorch_model import RegressionNN
+from utils.pytorch_training import train, predict
+from utils.pytorch_dataset import create_dataset_for_dnn
+
+import xgboost as xgb
 from sklearn.ensemble import ExtraTreesRegressor
+
+import torch
+import torch.nn as nn
+import torch.optim as optim
+
+device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
 initial_params = {
@@ -28,12 +40,12 @@ initial_params = {
         "seed": 42
     },
     'pytorch_nn': {
-        'input_size': 8,
-        'hidden_size': 10,
-        'num_classes': 1,
-        'num_epochs': 5,
-        'batch_size': 100,
-        'learning_rate': 0.001
+        'hidden_size1': 2048,
+        'hidden_size2': 1500,
+        'hidden_size3': 1000,
+        'num_epochs': 15,
+        'batch_size': 128,
+        'learning_rate': 0.0001
     }
 }
 
@@ -89,13 +101,40 @@ class ModelFitting:
 
         elif self.model_name == 'pytorch_nn':
 
-            pass
+            loader = create_dataset_for_dnn(
+                split=self.split, 
+                columns_of_interest=self.var, 
+                batch_size=self.model_params['batch_size']
+            )
+
+            input_size = loader['train_dataloader'].dataset.features.shape[1]
+            hidden_size1 = self.model_params['hidden_size1']
+            hidden_size2 = self.model_params['hidden_size2']
+            hidden_size3 = self.model_params['hidden_size3']
+
+            self.model = RegressionNN(
+                input_size=input_size,
+                hidden_size1=hidden_size1,
+                hidden_size2=hidden_size2,
+                hidden_size3=hidden_size3
+            )
+
+            optimizer = optim.Adam(self.model.parameters(), lr= self.model_params['learning_rate'])
+            criterion = nn.MSELoss()
+
+            self.history = train(
+                model=self.model,
+                train_loader=loader['train_dataloader'],
+                val_loader=loader['val_dataloader'],
+                epochs= self.model_params['num_epochs'],
+                criterion=criterion,
+                optimizer=optimizer,
+                device=device,
+                metric='mae'
+            )
 
         else:
             raise ValueError(f'Invalid model name: {self.model_name}.')
-
-
-
 
     def make_predictions(self) -> Dict[str, pd.DataFrame]:
         """
