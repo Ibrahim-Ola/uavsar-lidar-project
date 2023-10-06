@@ -1,14 +1,13 @@
 import numpy as np
 
 import torch
-import torch.optim as optim
 from torch.nn.functional import l1_loss, mse_loss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
 
-def train(model, train_loader, val_loader, epochs, criterion, optimizer, device, metric='mae'):
+def train(model, train_loader, val_loader, epochs, criterion, optimizer, device, metric='mae', verbose=True):
     model.to(device)
     history = {'train_loss': [], 'val_loss': [], 'train_metric': [], 'val_metric': []}
 
@@ -75,7 +74,9 @@ def train(model, train_loader, val_loader, epochs, criterion, optimizer, device,
         # 2. Step the scheduler with validation loss for ReduceLROnPlateau
         scheduler.step(avg_val_loss)
 
-        print(f"Epoch [{epoch+1}/{epochs}], Train Loss: {avg_train_loss:.4f}, Train {metric.upper()}: {avg_train_metric:.4f}, Validation Loss: {avg_val_loss:.4f}, Validation {metric.upper()}: {avg_val_metric:.4f}")
+        if verbose:
+
+            print(f"Epoch [{epoch+1}/{epochs}], Train Loss: {avg_train_loss:.4f}, Train {metric.upper()}: {avg_train_metric:.4f}, Validation Loss: {avg_val_loss:.4f}, Validation {metric.upper()}: {avg_val_metric:.4f}")
 
     return history
 
