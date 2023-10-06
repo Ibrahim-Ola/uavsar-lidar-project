@@ -101,13 +101,13 @@ class ModelFitting:
 
         elif self.model_name == 'pytorch_nn':
 
-            loader = create_dataset_for_dnn(
+            self.loader = create_dataset_for_dnn(
                 split=self.split, 
                 columns_of_interest=self.var, 
                 batch_size=self.model_params['batch_size']
             )
 
-            input_size = loader['train_dataloader'].dataset.features.shape[1]
+            input_size = self.loader['train_dataloader'].dataset.features.shape[1]
             hidden_size1 = self.model_params['hidden_size1']
             hidden_size2 = self.model_params['hidden_size2']
             hidden_size3 = self.model_params['hidden_size3']
@@ -124,8 +124,8 @@ class ModelFitting:
 
             self.history = train(
                 model=self.model,
-                train_loader=loader['train_dataloader'],
-                val_loader=loader['val_dataloader'],
+                train_loader=self.loader['train_dataloader'],
+                val_loader=self.loader['val_dataloader'],
                 epochs= self.model_params['num_epochs'],
                 criterion=criterion,
                 optimizer=optimizer,
@@ -186,7 +186,32 @@ class ModelFitting:
 
         elif self.model_name == 'pytorch_nn':
 
-            pass
+            self.predictions_test = predict(
+                model=self.model,
+                test_loader=self.loader['test_dataloader'],
+                device=device
+            )
+
+            self.predictions_train = predict(
+                model=self.model,
+                test_loader=self.loader['train_dataloader'],
+                device=device
+            )
+
+            y_pred_test_df = pd.DataFrame(
+                data = self.predictions_test['predictions'],
+                columns = ['snow_depth_pred']
+            )
+
+            y_pred_train_df = pd.DataFrame(
+                data = self.predictions_train['predictions'],
+                columns = ['snow_depth_pred']
+            )
+
+            return {
+                'y_pred_test': y_pred_test_df,
+                'y_pred_train': y_pred_train_df
+            }
 
         else:
             raise ValueError(f'Invalid model name: {self.model_name}.')
@@ -238,7 +263,7 @@ class ModelFitting:
 
         elif self.model_name == 'pytorch_nn':
 
-            pass
+            
 
         else:
             raise ValueError(f'Invalid model name: {self.model_name}.')
