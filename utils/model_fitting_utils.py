@@ -263,7 +263,22 @@ class ModelFitting:
 
         elif self.model_name == 'pytorch_nn':
 
-            
+            train_eval=evaluate_model(
+                y_true=self.predictions_train['labels'],
+                y_pred=self.predictions_train['predictions'],
+                model_name=self.model_name + '_train'
+            )
+
+            test_eval=evaluate_model(
+                y_true=self.predictions_test['labels'],
+                y_pred=self.predictions_test['predictions'],
+                model_name=self.model_name + '_test'
+            )
+
+            eval_df = pd.concat([train_eval, test_eval], axis=1)
+            display(eval_df)
+
+            return eval_df
 
         else:
             raise ValueError(f'Invalid model name: {self.model_name}.')
@@ -298,9 +313,7 @@ class ModelFitting:
             return feature_importance
 
         elif self.model_name == 'pytorch_nn':
-
-            pass
+            print('No feature importance for PyTorch NNs.')
 
         else:
             raise ValueError(f'Invalid model name: {self.model_name}.')
-        
