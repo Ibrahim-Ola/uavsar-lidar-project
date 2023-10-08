@@ -89,7 +89,7 @@ class ModelFitting:
             
         elif self.model_name == 'xgboost':
 
-            dtrain=xgb.DMatrix(self.split['X_temp'][self.var], label=self.split['y_train'])
+            dtrain=xgb.DMatrix(self.split['X_temp'][self.var], label=self.split['y_temp'])
             n_trees = self.model_params["trees"]
             boosting_params = self.model_params.copy()
             boosting_params.pop("trees")
