@@ -283,7 +283,6 @@ class ModelFitting:
 
         else:
             raise ValueError(f'Invalid model name: {self.model_name}.')
-        
     
     def get_importance(self) -> pd.DataFrame:
 
