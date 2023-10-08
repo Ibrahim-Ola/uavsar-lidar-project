@@ -29,14 +29,15 @@ initial_params = {
     'xgboost': {
         "sampling_method": "gradient_based",
         'objective': 'reg:squarederror',
-        'learning_rate': 0.23,
+        "min_child_weight": 30,
+        'learning_rate': 0.05,
         'tree_method': 'hist',
         'booster': 'gbtree',
         'device': 'cuda',
-        'max_depth': 11,
+        'max_depth': 0,
         "subsample": 1,
-        "trees": 5000,
-        "max_bin":500,
+        "max_bin":5096,
+        "trees": 1000,
         "seed": 42
     },
     'pytorch_nn': {
