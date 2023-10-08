@@ -304,7 +304,7 @@ class ModelFitting:
 
             feature_importance = pd.DataFrame(
                 data = {
-                    'feature': self.split['X_temp'].columns,
+                    'feature': self.split['X_temp'][self.var].columns,
                     'importance': self.model.get_score(importance_type='gain').values()
                 }
             ).sort_values(by='importance', ascending=False)
