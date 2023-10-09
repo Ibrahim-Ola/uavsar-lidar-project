@@ -51,7 +51,8 @@ initial_params = {
         'hidden_size3': 1000,
         'num_epochs': 15,
         'batch_size': 128,
-        'learning_rate': 0.0001
+        'learning_rate': 0.0001,
+        'verbose': True
     }
 }
 
@@ -136,7 +137,8 @@ class ModelFitting:
                 criterion=criterion,
                 optimizer=optimizer,
                 device=device,
-                metric='mae'
+                metric='mae',
+                verbose=self.model_params['verbose']
             )
 
         else:
