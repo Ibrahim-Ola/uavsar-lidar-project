@@ -9,7 +9,12 @@ from utils.pytorch_training import train, predict
 from utils.pytorch_dataset import create_dataset_for_dnn
 
 import xgboost as xgb
+from sklearn import set_config
 from sklearn.ensemble import ExtraTreesRegressor
+
+set_config(
+    transform_output="pandas"
+)
 
 import torch
 import torch.nn as nn
