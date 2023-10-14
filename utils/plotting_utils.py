@@ -13,7 +13,8 @@ def plot_var(
          Tuple[Union[int, float], ...], 
          List[Union[int, float]]
       ],
-      pi_cbar: bool =False
+      pi_cbar: bool =False,
+      cmap: str = 'viridis'
 ) -> Figure:
     """
     A function that Plots a variable/remote sensing parameters with a colorbar and
@@ -51,7 +52,7 @@ def plot_var(
         easting.min(), easting.max(),
         northing.max(),northing.min()
     ]
-    plt.imshow(variable, extent=extent, aspect='auto')
+    plt.imshow(variable, extent=extent, aspect='auto', cmap=cmap)
     ax = plt.gca()
     ax.invert_yaxis()
     plt.title(var_name, fontsize=10)
