@@ -69,3 +69,29 @@ def plot_var(
 
     current_figure = plt.gcf()
     return current_figure
+
+
+def plot_results(ax, X, y, predictions, title, xlabel, ylabel, r2_value, pos1=0.8):
+    """
+    Plot the results of a regression model.
+
+    Parameters:
+    - ax: Matplotlib axis object. The axis on which to plot the results.
+    - X: array-like, shape (n_samples,). Predictive values used for the x-axis in the plot.
+    - y: array-like, shape (n_samples,). Observed values used for the y-axis in the plot.
+    - predictions: array-like, shape (n_samples,). Predicted values from the model.
+    - title: str. Title for the plot.
+    - xlabel: str. Label for the x-axis.
+    - ylabel: str. Label for the y-axis.
+    - r2_value: float. The R-squared value for the model's predictions.
+    - pos1: float, optional. Horizontal position for the R-squared annotation (default is 0.8).
+
+    Returns:
+    None
+    """
+    ax.scatter(X, y, edgecolor='black', s=100)
+    ax.plot(X, predictions, color='red', label=f'Linear fit, $R^2={r2_value:.3f}$')
+    ax.text(pos1, 1.6, f'$R^2 = {r2_value:.3f}$', fontsize=12)
+    ax.set_ylabel(ylabel)
+    ax.set_xlabel(xlabel)
+    ax.set_title(title)
