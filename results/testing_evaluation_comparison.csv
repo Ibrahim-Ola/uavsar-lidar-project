@@ -1,25 +1,25 @@
-,Model,LandCover,Features,RMSE,MBE,R2
-1,NNets,NoVegetation,baseline,0.2392,0.0024,0.3369
-3,NNets,NoVegetation,uavsar,0.1596,0.0097,0.7047
-5,NNets,FullDataset,baseline,0.2496,0.0115,0.218
-7,NNets,FullDataset,uavsar,0.165,0.0097,0.658
-9,NNets,FullDataset,all,0.1554,-0.009,0.6966
-11,NNets,Vegetation,baseline,0.2279,0.0059,0.2503
-13,NNets,Vegetation,uavsar,0.1688,0.0035,0.5888
-15,NNets,Vegetation,all,0.1515,-0.001,0.6686
-17,ExtraTrees,NoVegetation,baseline,0.2261,0.0012,0.4073
-19,ExtraTrees,NoVegetation,uavsar,0.0998,0.0002,0.8845
-21,ExtraTrees,FullDataset,baseline,0.2363,0.0003,0.2989
-23,ExtraTrees,FullDataset,uavsar,0.1013,0.0003,0.8712
-25,ExtraTrees,FullDataset,all,0.0991,0.0003,0.8767
-27,ExtraTrees,Vegetation,baseline,0.2065,0.0003,0.3844
-29,ExtraTrees,Vegetation,uavsar,0.1039,0.0,0.8441
-31,ExtraTrees,Vegetation,all,0.1049,-0.0005,0.8413
-33,XGBoost,NoVegetation,baseline,0.2381,0.0009,0.3428
-35,XGBoost,NoVegetation,uavsar,0.0937,0.0001,0.8982
-37,XGBoost,FullDataset,baseline,0.2485,0.0003,0.2246
-39,XGBoost,FullDataset,uavsar,0.0974,0.0004,0.881
-41,XGBoost,FullDataset,all,0.0928,0.0002,0.8919
-43,XGBoost,Vegetation,baseline,0.2275,-0.0002,0.2531
-45,XGBoost,Vegetation,uavsar,0.1023,0.0002,0.8489
-47,XGBoost,Vegetation,all,0.0984,-0.0004,0.8601
+,Model,Land Cover,Features,RMSE,MBE,R2
+1,FNN,Open Areas,baseline,0.2392,0.0024,0.3369
+3,FNN,Open Areas,uavsar,0.1596,0.0097,0.7047
+5,FNN,Full Dataset,baseline,0.2496,0.0115,0.218
+7,FNN,Full Dataset,uavsar,0.165,0.0097,0.658
+9,FNN,Full Dataset,all,0.1554,-0.009,0.6966
+11,FNN,Forested Areas,baseline,0.2279,0.0059,0.2503
+13,FNN,Forested Areas,uavsar,0.1688,0.0035,0.5888
+15,FNN,Forested Areas,all,0.1515,-0.001,0.6686
+17,Extra Trees,Open Areas,baseline,0.2261,0.0012,0.4073
+19,Extra Trees,Open Areas,uavsar,0.0998,0.0002,0.8845
+21,Extra Trees,Full Dataset,baseline,0.2363,0.0003,0.2989
+23,Extra Trees,Full Dataset,uavsar,0.1013,0.0003,0.8712
+25,Extra Trees,Full Dataset,all,0.0991,0.0003,0.8767
+27,Extra Trees,Forested Areas,baseline,0.2065,0.0003,0.3844
+29,Extra Trees,Forested Areas,uavsar,0.1039,0.0,0.8441
+31,Extra Trees,Forested Areas,all,0.1049,-0.0005,0.8413
+33,XGBoost,Open Areas,baseline,0.2381,0.0009,0.3428
+35,XGBoost,Open Areas,uavsar,0.0937,0.0001,0.8982
+37,XGBoost,Full Dataset,baseline,0.2485,0.0003,0.2246
+39,XGBoost,Full Dataset,uavsar,0.0974,0.0004,0.881
+41,XGBoost,Full Dataset,all,0.0928,0.0002,0.8919
+43,XGBoost,Forested Areas,baseline,0.2275,-0.0002,0.2531
+45,XGBoost,Forested Areas,uavsar,0.1023,0.0002,0.8489
+47,XGBoost,Forested Areas,all,0.0984,-0.0004,0.8601
