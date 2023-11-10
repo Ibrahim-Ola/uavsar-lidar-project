@@ -1,4 +1,4 @@
-,Model,LandCover,Features,RMSE,MBE,R2
+,Model,Land Cover,Features,RMSE,MBE,R2
 0,NNets,NoVegetation,baseline,0.2385,0.0015,0.3405
 2,NNets,NoVegetation,uavsar,0.1579,0.0095,0.7111
 4,NNets,FullDataset,baseline,0.2501,0.0111,0.2174
