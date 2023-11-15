@@ -55,9 +55,9 @@ def plot_var(
     plt.imshow(variable, extent=extent, aspect='auto', cmap=cmap)
     ax = plt.gca()
     ax.invert_yaxis()
-    plt.title(var_name, fontsize=10)
-    plt.xlabel('UTM Zone 13 Easting [m]', fontsize=10)
-    plt.ylabel('UTM Zone 13 Northing [m]', fontsize=10)
+    plt.title(var_name, fontsize=14)
+    plt.xlabel('UTM Zone 13 Easting [m]', fontsize=14)
+    plt.ylabel('UTM Zone 13 Northing [m]', fontsize=14)
     plt.clim(clims[0], clims[1])
 
     if pi_cbar:
