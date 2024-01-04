@@ -2,4 +2,4 @@
 PACKAGE_NAME = 'Utility Package'
 
 def package_info():
-    return f"Thus is the {PACKAGE_NAME}"
+    return f"This is the {PACKAGE_NAME}"
