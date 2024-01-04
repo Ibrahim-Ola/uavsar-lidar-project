@@ -50,24 +50,29 @@ def plot_var(
 
     extent=[
         easting.min(), easting.max(),
-        northing.max(),northing.min()
+        northing.max(), northing.min()
     ]
     plt.imshow(variable, extent=extent, aspect='auto', cmap=cmap)
     ax = plt.gca()
     ax.invert_yaxis()
-    plt.title(var_name, fontsize=14)
-    plt.xlabel('UTM Zone 13 Easting [m]', fontsize=14)
-    plt.ylabel('UTM Zone 13 Northing [m]', fontsize=14)
+    plt.title(var_name, fontsize=20)
+    plt.xlabel('UTM Zone 13 Easting [m]', fontsize=18)
+    plt.xticks(fontsize=14)
+    plt.ylabel('UTM Zone 13 Northing [m]', fontsize=18)
+    plt.yticks(fontsize=14)
     plt.clim(clims[0], clims[1])
 
     if pi_cbar:
-      cbar=plt.colorbar()
-      cbar.set_ticks([-np.pi, -np.pi/2, 0, np.pi/2, np.pi])
-      cbar.set_ticklabels([r'$-\pi$', r'$-\pi/2$', r'$0$', r'$+\pi/2$', r'$+\pi$'])
+        cbar = plt.colorbar()
+        cbar.set_ticks([-np.pi, -np.pi/2, 0, np.pi/2, np.pi])
+        cbar.set_ticklabels([r'$-\pi$', r'$-\pi/2$', r'$0$', r'$+\pi/2$', r'$+\pi$'])
+        cbar.ax.tick_params(labelsize=14)  # Increase tick size for colorbar
     else:
-      plt.colorbar()
+        cbar=plt.colorbar()
+        cbar.ax.tick_params(labelsize=14)
 
     current_figure = plt.gcf()
+
     return current_figure
 
 
