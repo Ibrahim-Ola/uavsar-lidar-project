@@ -36,9 +36,10 @@ def setup_package():
         python_requires=PYTHON_REQUIRES,
         packages=find_packages(),
         install_requires=[
-            "numpy",
-            "pandas",
-            "matplotlib",
+            "numpy==1.26.3",
+            "pandas==2.1.4",
+            "matplotlib==3.8.0",
+            "seaborn==0.13.1",
             "scipy",
             "scikit-learn",
             "gdal",
