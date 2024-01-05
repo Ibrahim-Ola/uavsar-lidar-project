@@ -76,7 +76,7 @@ def plot_var(
     return current_figure
 
 
-def plot_results(ax, X, y, predictions, title, xlabel, ylabel, r2_value, pos1=0.8):
+def plot_results(ax, X, y, predictions, title, xlabel, ylabel, r2_value, rmse_value, pos1=0.8):
     """
     Plot the results of a regression model.
 
@@ -95,8 +95,10 @@ def plot_results(ax, X, y, predictions, title, xlabel, ylabel, r2_value, pos1=0.
     None
     """
     ax.scatter(X, y, edgecolor='black', s=100)
-    ax.plot(X, predictions, color='red', label=f'Linear fit, $R^2={r2_value:.3f}$')
-    ax.text(pos1, 1.6, f'$R^2 = {r2_value:.3f}$', fontsize=12)
-    ax.set_ylabel(ylabel)
-    ax.set_xlabel(xlabel)
-    ax.set_title(title)
+    ax.plot(X, predictions, color='red')
+    ax.text(pos1, 1.6, f'$R^2 = {r2_value:.3f}$\nRMSE = {rmse_value*100:.3f} [cm]', fontsize=14)
+    ax.set_ylabel(ylabel, fontsize=16)
+    ax.tick_params(axis='x', labelsize=14)  
+    ax.tick_params(axis='y', labelsize=14)  
+    ax.set_xlabel(xlabel, fontsize=16)
+    ax.set_title(title, fontsize=16)
