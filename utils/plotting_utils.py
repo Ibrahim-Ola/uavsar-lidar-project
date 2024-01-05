@@ -95,7 +95,7 @@ def plot_results(ax, X, y, predictions, title, xlabel, ylabel, r2_value, rmse_va
     None
     """
     ax.scatter(X, y, edgecolor='black', s=100)
-    ax.plot(X, predictions, color='red')
+    ax.plot([min(X), max(X)], [min(y), max(y)], 'k--', lw=4)
     ax.text(pos1, 1.6, f'$R^2 = {r2_value:.3f}$\nRMSE = {rmse_value*100:.3f} [cm]', fontsize=14)
     ax.set_ylabel(ylabel, fontsize=16)
     ax.tick_params(axis='x', labelsize=14)  
