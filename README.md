@@ -24,7 +24,7 @@ This work uses dataset from the 2017 NASA SnowEx Campaign. The InSAR data is fro
 To use the codes in this repository, you need to have Python installed. There are several ways to install Pyton. I will take you through how to install Python using the [pyenv](https://github.com/pyenv/pyenv) utility program. `pyenv` allows you to install different versions of Python and to seamlessly switch between them.
 
 
-### 1. Install `pyenv``
+### 1. Install `pyenv`
 
 Please follow the instructions [here](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation) to install `pyenv` for your operation system (OS).
 
