@@ -62,7 +62,7 @@ git clone https://github.com/Ibrahim-Ola/uavsar-lidar-project.git
 cd uavsar-lidar-project
 ```
 
-### 4. Install Package (source code) in Editable Mode 
+### 4. Install Source Code in Editable Mode 
 
 ```{bash}
 pip install -e .
