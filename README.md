@@ -43,17 +43,44 @@ source .venv/bin/activate
 pip install --upgrade pip
 ```
 
-## Methodology
-- Explain the methodology and any models used.
+#### 2.2 Windows
 
-## Results
-- Discuss the results obtained (link to paper).
+`pyenv` does not officially support Windows OS. Hence, you should install Python directly for your own version of Windows either by using the Microsoft Store or by navigating to [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/) in your browser and following the download links. During installation, be sure to check the box that adds Python to your `PATH` environment variables. To run Python in a virtual environment, open the PowerShell and follow the instructions below.
 
-## Contributing
-- Guidelines for contributing to the project.
+```{bash}
+mkdir insar_project
+cd insar_project
+python -m venv .venv
+.venv/Scripts/activate
+pip install --upgrade pip
+```
 
-## License
-- License information.
+### 3. Clone the Repository
+
+```{bash}
+git clone https://github.com/Ibrahim-Ola/uavsar-lidar-project.git
+cd uavsar-lidar-project
+```
+
+### 4. Install Package (source code) in Editable Mode 
+
+```{bash}
+pip install -e .
+```
+
+### 5. Directory Setup
+
+Create the data folder using the command below.
+
+```{bash}
+mkdir data
+```
 
 ## Acknowledgements
-- Many thanks to SnowEX organization
+
+- We would like to express our gratitude to the NASA Terrestrial Hydrology Program and all participants of the SnowEx campaign for providing the Lidar and in-situ data. 
+
+- We also thank Yunling Lou - the UAVSAR Project Manager at NASA JPL - for the UAVSAR data. 
+
+- This work was partially funded by the U.S. Army Cold Regions Research and Engineering Laboratory (CRREL) under contract W913E523C0002.
+
