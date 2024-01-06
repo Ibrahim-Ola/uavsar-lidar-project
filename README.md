@@ -76,6 +76,8 @@ Create the data folder using the command below.
 mkdir data
 ```
 
+Download the dataset into the `data` folder by following the links in the `Dataset` section above.
+
 ## Acknowledgements
 
 - We would like to express our gratitude to the NASA Terrestrial Hydrology Program and all participants of the SnowEx campaign for providing the Lidar and in-situ data. 
