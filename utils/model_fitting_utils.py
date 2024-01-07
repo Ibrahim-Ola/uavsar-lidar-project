@@ -20,7 +20,15 @@ import torch
 import torch.nn as nn
 import torch.optim as optim
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+xgb_device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+
+device = (
+    "cuda"
+    if torch.cuda.is_available()
+    else "mps"
+    if torch.backends.mps.is_available()
+    else "cpu"
+)
 
 
 initial_params = {
@@ -38,7 +46,7 @@ initial_params = {
         'learning_rate': 0.05,
         'tree_method': 'hist',
         'booster': 'gbtree',
-        'device': 'cuda',
+        'device': xgb_device,
         'max_depth': 0,
         "subsample": 1,
         "max_bin":5096,
@@ -79,7 +87,7 @@ class ModelFitting:
             self.model_params = {**initial_params['pytorch_nn'], **model_params}
 
         else:
-            raise ValueError(f'Invalid model name: {self.model_name}.')
+            raise ValueError(f'Invalid model name: {self.model_name}. \nPlease choose from: extra_trees, xgboost, pytorch_nn.')
 
     
     def fit_model(self) -> None:
@@ -222,7 +230,7 @@ class ModelFitting:
             }
 
         else:
-            raise ValueError(f'Invalid model name: {self.model_name}.')
+            raise ValueError(f'Invalid model name: {self.model_name}. \nPlease choose from: extra_trees, xgboost, pytorch_nn.')
         
 
     def evaluate_model(self) -> pd.DataFrame:
@@ -289,7 +297,7 @@ class ModelFitting:
             return eval_df
 
         else:
-            raise ValueError(f'Invalid model name: {self.model_name}.')
+            raise ValueError(f'Invalid model name: {self.model_name}. \nPlease choose from: extra_trees, xgboost, pytorch_nn.')
     
     def get_importance(self) -> pd.DataFrame:
 
