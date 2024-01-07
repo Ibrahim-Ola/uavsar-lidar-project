@@ -4,7 +4,13 @@ import torch
 from torch.nn.functional import l1_loss, mse_loss
 from torch.optim.lr_scheduler import ReduceLROnPlateau
 
-device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+device = (
+    "cuda"
+    if torch.cuda.is_available()
+    else "mps"
+    if torch.backends.mps.is_available()
+    else "cpu"
+)
 
 
 def train(model, train_loader, val_loader, epochs, criterion, optimizer, device, metric='mae', verbose=True):
