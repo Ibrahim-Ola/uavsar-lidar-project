@@ -32,7 +32,7 @@ Please follow the instructions [here](https://github.com/pyenv/pyenv?tab=readme-
 
 #### 2.1 Mac and Linux
 
-Open the terminal and type the following to setup your virtual environment.
+Open the terminal and type the following commands to setup your virtual environment.
 
 ```{bash}
 mkdir insar_project
@@ -45,7 +45,7 @@ pip install --upgrade pip
 
 #### 2.2 Windows
 
-`pyenv` does not officially support Windows OS. Hence, you should install Python directly for your own version of Windows either by using the Microsoft Store or by navigating to [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/) in your browser and following the download links. During installation, be sure to check the box that adds Python to your `PATH` environment variables. To run Python in a virtual environment, open the PowerShell and follow the instructions below.
+`pyenv` does not officially support Windows OS. Hence, you should install Python directly for your own version of Windows either by using the Microsoft Store or by navigating to [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/) in your browser and following the download link. During installation, be sure to check the box that adds Python to your `PATH` environment variables. To run Python in a virtual environment, open the PowerShell program and type the follow commands.
 
 ```{bash}
 mkdir insar_project
@@ -54,6 +54,8 @@ python -m venv .venv
 .venv/Scripts/activate
 pip install --upgrade pip
 ```
+
+If these instructions doesn't work for you (Windows users), you may need change the execution policy of your computer. To do this, run the PowerShell program as an administrator and run `Set ExecutionPolicy Unrestricted`. Afterwards, exit and reopen the PowerShell program (not as an administrator) then type commands in 2.2.  
 
 ### 3. Clone the Repository
 
