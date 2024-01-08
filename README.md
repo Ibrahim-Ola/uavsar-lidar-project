@@ -80,6 +80,15 @@ mkdir data
 
 Download the dataset into the `data` folder by following the links in the `Dataset` section above.
 
+
+### 6. Deactivate Environment
+
+After running the experiments, you can deactivate the environment by running
+
+```{bash}
+deactivate
+```
+
 ## Acknowledgements
 
 - We would like to express our gratitude to the NASA Terrestrial Hydrology Program and all participants of the SnowEx campaign for providing the Lidar and in-situ data. 
