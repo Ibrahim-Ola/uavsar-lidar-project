@@ -83,7 +83,7 @@ Download the dataset into the `data` folder by following the links in the `Datas
 
 ### 6. Deactivate Environment
 
-After running the experiments, you can deactivate the environment by running
+After running the experiments, you can deactivate the virtual environment by running the command below.
 
 ```{bash}
 deactivate
