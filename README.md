@@ -26,8 +26,7 @@ To use the codes in this repository, you need to have Python installed. There ar
 
 ### 1. Install `pyenv`
 
-Please follow the instructions [here](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation) to install `pyenv` for your operation system (OS). Run `pyenv install 3.11.5` to install Python version 3.11.5, if you do not already have it installed.
-
+Please follow the instructions [here](https://github.com/pyenv/pyenv?tab=readme-ov-file#installation) to install `pyenv` for your operation system (OS).
 ### 2. Setup the environment
 
 #### 2.1 Mac and Linux
@@ -35,6 +34,7 @@ Please follow the instructions [here](https://github.com/pyenv/pyenv?tab=readme-
 Open the terminal and type the following commands to setup your virtual environment.
 
 ```{bash}
+pyenv install 3.11.5
 mkdir insar_project
 cd insar_project
 pyenv local 3.11.5
