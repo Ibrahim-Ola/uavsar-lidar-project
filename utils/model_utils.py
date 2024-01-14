@@ -1,7 +1,6 @@
 import numpy as np
 import pandas as pd
 from typing import Dict, Union
-from sklearn.linear_model import LinearRegression
 from sklearn.model_selection import train_test_split
 from sklearn.metrics import mean_squared_error, r2_score
 
@@ -84,18 +83,3 @@ def evaluate_model(
     }, index = ['RMSE', 'MBE', 'RSQ'])
     
     return score_df
-
-def train_and_predict(X, y):
-    """
-    Train a linear regression model and make predictions on the dataset.
-
-    Parameters:
-    - X: array-like, shape (n_samples,). Feature values to train the model.
-    - y: array-like, shape (n_samples,). Target values to train the model.
-
-    Returns:
-    - predictions: array, shape (n_samples,). Predicted values by the trained model.
-    """
-    model = LinearRegression()
-    model.fit(X.values.reshape(-1, 1), y.values.reshape(-1, 1))
-    return model.predict(X.values.reshape(-1, 1))
