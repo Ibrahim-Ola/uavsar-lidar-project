@@ -64,10 +64,10 @@ git clone https://github.com/Ibrahim-Ola/uavsar-lidar-project.git
 cd uavsar-lidar-project
 ```
 
-### 4. Install Source Code in Editable Mode 
+### 4. Install Source Code
 
 ```{bash}
-pip install -e .
+pip install .
 ```
 
 ### 5. Directory Setup
