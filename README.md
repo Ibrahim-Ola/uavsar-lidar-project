@@ -33,7 +33,7 @@ Please follow the instructions [here](https://github.com/pyenv/pyenv?tab=readme-
 
 Open the terminal and type the following commands to setup your virtual environment.
 
-```{bash}
+```bash
 pyenv install 3.11.5
 mkdir insar_project
 cd insar_project
@@ -47,7 +47,7 @@ pip install --upgrade pip
 
 `pyenv` does not officially support Windows OS. Hence, you should install Python directly for your own version of Windows either by using the Microsoft Store or by navigating to [https://www.python.org/downloads/windows/](https://www.python.org/downloads/windows/) in your browser and following the download link. During installation, be sure to check the box that adds Python to your `PATH` environment variables. To run Python in a virtual environment, open the PowerShell program and type the follow commands.
 
-```{bash}
+```bash
 mkdir insar_project
 cd insar_project
 python -m venv .venv
@@ -59,14 +59,14 @@ If these instructions doesn't work for you (Windows users), you may need change 
 
 ### 3. Clone the Repository
 
-```{bash}
+```bash
 git clone https://github.com/Ibrahim-Ola/uavsar-lidar-project.git
 cd uavsar-lidar-project
 ```
 
 ### 4. Install Source Code
 
-```{bash}
+```bash
 pip install .
 ```
 
@@ -74,7 +74,7 @@ pip install .
 
 Create the data folder using the command below.
 
-```{bash}
+```bash
 mkdir data
 ```
 
@@ -85,7 +85,7 @@ Download the dataset into the `data` folder by following the links in the `Datas
 
 After running the experiments, you can deactivate the virtual environment by running the command below.
 
-```{bash}
+```bash
 deactivate
 ```
 
