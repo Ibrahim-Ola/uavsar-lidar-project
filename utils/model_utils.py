@@ -75,7 +75,7 @@ def evaluate_model(
     """
 
     RMSE = mean_squared_error(y_true=y_true, y_pred=y_pred, squared=False)
-    MBE  = np.mean(y_true - y_pred)
+    MBE  = np.mean(y_pred- y_true)
     RSQ  = r2_score(y_true=y_true, y_pred=y_pred)
     
     score_df = pd.DataFrame({
