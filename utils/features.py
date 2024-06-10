@@ -1,5 +1,5 @@
 
-BASELINE_FEATURES=['elevation']
+BASELINE_FEATURES=['bare_earth_dem']
 
 UAVSAR_FEATURES=[
     'coherence',
