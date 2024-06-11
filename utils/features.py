@@ -1,11 +1,11 @@
 
-BASELINE_FEATURES=['bare_earth_dem']
+BASELINE_FEATURES=['elevation']
 
 UAVSAR_FEATURES=[
     'coherence',
     'amplitude',
     'wrapped_phase',
-    'bare_earth_dem',
+    'elevation',
     'incidence_angle',
     'unwrapped_phase'
 ]
@@ -15,7 +15,7 @@ UAVSAR_AND_VEGETATION_HEIGHT_FEATURES=[
     'amplitude',
     'vegetation_ht',
     'wrapped_phase',
-    'bare_earth_dem',
+    'elevation',
     'incidence_angle',
     'unwrapped_phase'
 ]
