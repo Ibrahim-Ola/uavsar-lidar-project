@@ -1,25 +1,31 @@
-,Model,Land Cover,Features,RMSE,MBE,R2
-1,FNN,Open Areas,baseline,0.2392,0.0024,0.3369
-3,FNN,Open Areas,uavsar,0.1596,0.0097,0.7047
-5,FNN,Full Dataset,baseline,0.2496,0.0115,0.218
-7,FNN,Full Dataset,uavsar,0.165,0.0097,0.658
-9,FNN,Full Dataset,all,0.1554,-0.009,0.6966
-11,FNN,Forested Areas,baseline,0.2279,0.0059,0.2503
-13,FNN,Forested Areas,uavsar,0.1688,0.0035,0.5888
-15,FNN,Forested Areas,all,0.1515,-0.001,0.6686
-17,Extra Trees,Open Areas,baseline,0.2261,0.0012,0.4073
-19,Extra Trees,Open Areas,uavsar,0.0998,0.0002,0.8845
-21,Extra Trees,Full Dataset,baseline,0.2363,0.0003,0.2989
-23,Extra Trees,Full Dataset,uavsar,0.1013,0.0003,0.8712
-25,Extra Trees,Full Dataset,all,0.0991,0.0003,0.8767
-27,Extra Trees,Forested Areas,baseline,0.2065,0.0003,0.3844
-29,Extra Trees,Forested Areas,uavsar,0.1039,0.0,0.8441
-31,Extra Trees,Forested Areas,all,0.1049,-0.0005,0.8413
-33,XGBoost,Open Areas,baseline,0.2381,0.0009,0.3428
-35,XGBoost,Open Areas,uavsar,0.0937,0.0001,0.8982
-37,XGBoost,Full Dataset,baseline,0.2485,0.0003,0.2246
-39,XGBoost,Full Dataset,uavsar,0.0974,0.0004,0.881
-41,XGBoost,Full Dataset,all,0.0928,0.0002,0.8919
-43,XGBoost,Forested Areas,baseline,0.2275,-0.0002,0.2531
-45,XGBoost,Forested Areas,uavsar,0.1023,0.0002,0.8489
-47,XGBoost,Forested Areas,all,0.0984,-0.0004,0.8601
+,Model,Data,Features,RMSE,MBE,R2
+1,FNN,Open Areas,BGE,0.2493,0.0003,0.321
+3,FNN,Open Areas,InSAR + BGE,0.1646,-0.0035,0.704
+5,FNN,Mixed Areas,BGE,0.2613,0.001,0.2047
+7,FNN,Mixed Areas,InSAR + BGE,0.1738,0.0095,0.6481
+9,FNN,Mixed Areas,"InSAR + 
+ BGE + VH",0.1617,-0.004,0.6952
+11,FNN,Vegetated Areas,BGE,0.2425,-0.0025,0.2368
+13,FNN,Vegetated Areas,InSAR + BGE,0.1802,-0.0094,0.5787
+15,FNN,Vegetated Areas,"InSAR + 
+ BGE + VH",0.1611,0.0071,0.6631
+17,Extra Trees,Open Areas,BGE,0.2365,0.0001,0.3891
+19,Extra Trees,Open Areas,InSAR + BGE,0.104,0.0001,0.8818
+21,Extra Trees,Mixed Areas,BGE,0.2483,0.0003,0.2815
+23,Extra Trees,Mixed Areas,InSAR + BGE,0.1085,0.0002,0.8629
+25,Extra Trees,Mixed Areas,"InSAR + 
+ BGE + VH",0.1052,0.0003,0.871
+27,Extra Trees,Vegetated Areas,BGE,0.2201,-0.0004,0.3712
+29,Extra Trees,Vegetated Areas,InSAR + BGE,0.1039,0.0,0.8441
+31,Extra Trees,Vegetated Areas,"InSAR + 
+ BGE + VH",0.1118,0.0008,0.8379
+33,XGBoost,Open Areas,BGE,0.2483,0.0007,0.3265
+35,XGBoost,Open Areas,InSAR + BGE,0.0985,-0.0001,0.894
+37,XGBoost,Mixed Areas,BGE,0.2606,0.0004,0.2087
+39,XGBoost,Mixed Areas,InSAR + BGE,0.104,-0.0,0.8739
+41,XGBoost,Mixed Areas,"InSAR + 
+ BGE + VH",0.0988,0.0001,0.8863
+43,XGBoost,Vegetated Areas,BGE,0.2421,0.0001,0.2393
+45,XGBoost,Vegetated Areas,InSAR + BGE,0.1098,-0.0002,0.8436
+47,XGBoost,Vegetated Areas,"InSAR + 
+ BGE + VH",0.1046,0.0005,0.8579
