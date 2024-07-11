@@ -44,7 +44,7 @@ def validate_predictions(
     ground_truth['geometry'] = ground_truth.buffer(buffer_distance)
 
     # Spatially join the predictions and ground truth
-    joined = gpd.sjoin(ground_truth, predictions, how='inner', predicate='contains')
+    joined = gpd.sjoin(ground_truth, predictions, how='inner', predicate='intersects')
 
     # For each in-situ point, calculate the average predicted snow_depth
     averaged = joined.groupby(joined.index)[pred_col].mean().reset_index()
