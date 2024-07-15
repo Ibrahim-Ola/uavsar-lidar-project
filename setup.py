@@ -40,9 +40,9 @@ def setup_package():
             "pandas==2.1.4",
             "matplotlib==3.8.0",
             "seaborn==0.13.1",
-            "shap==0.42.1",
+            "shap==0.46.0",
             "scikit-learn==1.3.2",
-            "xgboost==2.0.0",
+            "xgboost==2.1.0",
             "torch==2.0.1",
             "geopandas==0.14.0",
             "scipy==1.11.2"
