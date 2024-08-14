@@ -8,7 +8,6 @@ def plot_var(
       variable: np.ndarray,
       easting: np.ndarray,
       northing: np.ndarray, 
-      var_name: str, 
       clims: Union[
          Tuple[Union[int, float], ...], 
          List[Union[int, float]]
@@ -55,7 +54,6 @@ def plot_var(
     plt.imshow(variable, extent=extent, aspect='auto', cmap=cmap)
     ax = plt.gca()
     ax.invert_yaxis()
-    plt.title(var_name, fontsize=20)
     plt.xlabel('UTM Zone 13 Easting [m]', fontsize=18)
     plt.xticks(fontsize=14)
     plt.ylabel('UTM Zone 13 Northing [m]', fontsize=18)
@@ -95,7 +93,6 @@ def plot_results(ax, X, y, title, xlabel, ylabel, r2_value, rmse_value, pos1=0.8
     None
     """
     ax.scatter(X, y, edgecolor='black', s=100)
-    # ax.plot([min(X), max(X)], [min(y), max(y)], color='red', lw=2)
     ax.plot([0,1], [0,1], transform=ax.transAxes, color='black', lw=2)
     ax.text(pos1, pos2, f'$R^2 = {r2_value:.3f}$\nRMSE = {rmse_value*100:.3f} [cm]', fontsize=20)
     ax.set_ylabel(ylabel, fontsize=24)
