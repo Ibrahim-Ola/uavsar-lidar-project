@@ -1,31 +1,25 @@
 ,Model,Data,Features,RMSE,MBE,R2
-1,FNN,Open Areas,BGE,0.2493,0.0003,0.321
-3,FNN,Open Areas,InSAR + BGE,0.1646,-0.0035,0.704
-5,FNN,Mixed Areas,BGE,0.2613,0.001,0.2047
-7,FNN,Mixed Areas,InSAR + BGE,0.1738,0.0095,0.6481
-9,FNN,Mixed Areas,"InSAR + 
- BGE + VH",0.1617,-0.004,0.6952
-11,FNN,Vegetated Areas,BGE,0.2425,-0.0025,0.2368
-13,FNN,Vegetated Areas,InSAR + BGE,0.1802,-0.0094,0.5787
-15,FNN,Vegetated Areas,"InSAR + 
- BGE + VH",0.1611,0.0071,0.6631
-17,Extra Trees,Open Areas,BGE,0.2365,0.0001,0.3891
-19,Extra Trees,Open Areas,InSAR + BGE,0.104,0.0001,0.8818
-21,Extra Trees,Mixed Areas,BGE,0.2483,0.0003,0.2815
-23,Extra Trees,Mixed Areas,InSAR + BGE,0.1085,0.0002,0.8629
-25,Extra Trees,Mixed Areas,"InSAR + 
- BGE + VH",0.1052,0.0003,0.871
-27,Extra Trees,Vegetated Areas,BGE,0.2201,-0.0004,0.3712
-29,Extra Trees,Vegetated Areas,InSAR + BGE,0.1039,0.0,0.8441
-31,Extra Trees,Vegetated Areas,"InSAR + 
- BGE + VH",0.1118,0.0008,0.8379
-33,XGBoost,Open Areas,BGE,0.2483,0.0007,0.3265
-35,XGBoost,Open Areas,InSAR + BGE,0.0985,-0.0001,0.894
-37,XGBoost,Mixed Areas,BGE,0.2606,0.0004,0.2087
-39,XGBoost,Mixed Areas,InSAR + BGE,0.104,-0.0,0.8739
-41,XGBoost,Mixed Areas,"InSAR + 
- BGE + VH",0.0988,0.0001,0.8863
-43,XGBoost,Vegetated Areas,BGE,0.2421,0.0001,0.2393
-45,XGBoost,Vegetated Areas,InSAR + BGE,0.1098,-0.0002,0.8436
-47,XGBoost,Vegetated Areas,"InSAR + 
- BGE + VH",0.1046,0.0005,0.8579
+1,FNN,Open Areas,Model 1,0.2493,0.0003,0.321
+3,FNN,Open Areas,Model 2,0.1646,-0.0035,0.704
+5,FNN,Combined Dataset,Model 1,0.2613,0.001,0.2047
+7,FNN,Combined Dataset,Model 2,0.1738,0.0095,0.6481
+9,FNN,Combined Dataset,Model 3,0.1617,-0.004,0.6952
+11,FNN,Vegetated Areas,Model 1,0.2425,-0.0025,0.2368
+13,FNN,Vegetated Areas,Model 2,0.1802,-0.0094,0.5787
+15,FNN,Vegetated Areas,Model 3,0.1611,0.0071,0.6631
+17,Extra Trees,Open Areas,Model 1,0.2365,0.0001,0.3891
+19,Extra Trees,Open Areas,Model 2,0.104,0.0001,0.8818
+21,Extra Trees,Combined Dataset,Model 1,0.2483,0.0003,0.2815
+23,Extra Trees,Combined Dataset,Model 2,0.1085,0.0002,0.8629
+25,Extra Trees,Combined Dataset,Model 3,0.1052,0.0003,0.871
+27,Extra Trees,Vegetated Areas,Model 1,0.2201,-0.0004,0.3712
+29,Extra Trees,Vegetated Areas,Model 2,0.1039,0.0,0.8441
+31,Extra Trees,Vegetated Areas,Model 3,0.1118,0.0008,0.8379
+33,XGBoost,Open Areas,Model 1,0.2483,0.0007,0.3265
+35,XGBoost,Open Areas,Model 2,0.0985,-0.0001,0.894
+37,XGBoost,Combined Dataset,Model 1,0.2606,0.0004,0.2087
+39,XGBoost,Combined Dataset,Model 2,0.104,-0.0,0.8739
+41,XGBoost,Combined Dataset,Model 3,0.0988,0.0001,0.8863
+43,XGBoost,Vegetated Areas,Model 1,0.2421,0.0001,0.2393
+45,XGBoost,Vegetated Areas,Model 2,0.1098,-0.0002,0.8436
+47,XGBoost,Vegetated Areas,Model 3,0.1046,0.0005,0.8579
