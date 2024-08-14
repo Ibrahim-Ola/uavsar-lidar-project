@@ -74,7 +74,7 @@ def plot_var(
     return current_figure
 
 
-def plot_results(ax, X, y, title, xlabel, ylabel, r2_value, rmse_value, pos1=0.8, pos2=1.6):
+def plot_results(ax, X, y, xlabel, ylabel, r2_value, rmse_value, pos1=0.8, pos2=1.6):
     """
     Plot the results of a regression model.
 
@@ -99,4 +99,3 @@ def plot_results(ax, X, y, title, xlabel, ylabel, r2_value, rmse_value, pos1=0.8
     ax.tick_params(axis='x', labelsize=18)  
     ax.tick_params(axis='y', labelsize=18)  
     ax.set_xlabel(xlabel, fontsize=24)
-    ax.set_title(title, fontsize=24)
