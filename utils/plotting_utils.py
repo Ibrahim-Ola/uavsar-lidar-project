@@ -13,7 +13,8 @@ def plot_var(
          List[Union[int, float]]
       ],
       pi_cbar: bool =False,
-      cmap: str = 'viridis'
+      cmap: str = 'viridis',
+      var_name: str = 'Variable'
 ) -> Figure:
     """
     A function that Plots a variable/remote sensing parameters with a colorbar and
@@ -54,9 +55,9 @@ def plot_var(
     plt.imshow(variable, extent=extent, aspect='auto', cmap=cmap)
     ax = plt.gca()
     ax.invert_yaxis()
-    plt.xlabel('UTM Zone 13 Easting [m]', fontsize=18)
+    plt.xlabel('Easting [m]', fontsize=18)
     plt.xticks(fontsize=14)
-    plt.ylabel('UTM Zone 13 Northing [m]', fontsize=18)
+    plt.ylabel('Northing [m]', fontsize=18)
     plt.yticks(fontsize=14)
     plt.clim(clims[0], clims[1])
 
@@ -64,10 +65,12 @@ def plot_var(
         cbar = plt.colorbar()
         cbar.set_ticks([-np.pi, -np.pi/2, 0, np.pi/2, np.pi])
         cbar.set_ticklabels([r'$-\pi$', r'$-\pi/2$', r'$0$', r'$+\pi/2$', r'$+\pi$'])
-        cbar.ax.tick_params(labelsize=14)  # Increase tick size for colorbar
+        cbar.ax.tick_params(labelsize=18)  # Increase tick size for colorbar
+        cbar.set_label(label=var_name, fontsize=18)
     else:
         cbar=plt.colorbar()
         cbar.ax.tick_params(labelsize=14)
+        cbar.set_label(label=var_name, fontsize=18)
 
     current_figure = plt.gcf()
 
