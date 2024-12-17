@@ -10,7 +10,7 @@ This work serves as a proof-of-concept that InSAR products can be used to estima
 This work uses dataset from the 2017 NASA SnowEx Campaign. The InSAR data is from NASA JPL's UAVSAR sensor, and the Lidar Depth is from ASO. 
 
 * Link to the remote sensing data we used: [link](https://drive.google.com/drive/folders/1Oalh_TooAk3PzQaBbyIwcWffLVaIEkuR?usp=sharing).
-* Link to the ground truth data: [NSIDC](https://nsidc.org/data/snex17_sd/versions/1).
+* Link to the ground in-situ data: [NSIDC](https://nsidc.org/data/snex17_sd/versions/1).
 
 
 ## Software and hardware list
