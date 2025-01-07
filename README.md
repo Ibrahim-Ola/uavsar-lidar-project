@@ -99,3 +99,19 @@ deactivate
 
 - This work was partially funded by the U.S. Army Cold Regions Research and Engineering Laboratory (CRREL) under contract W913E523C0002.
 
+
+## Citation
+
+We would appreciate citations if you use our code in your work.
+
+```bash
+@article{alabi5advancing,
+  title={Advancing Terrestrial Snow Depth Monitoring with Machine Learning and L-band InSAR Data: A Case Study Using SnowEx 2017 Data},
+  author={Alabi, Ibrahim Olalekan and Marshall, Hans-Peter and Mead, Jodi and Trujillo, Ernesto},
+  journal={Frontiers in Remote Sensing},
+  volume={5},
+  pages={1481848},
+  year={2025},
+  publisher={Frontiers}
+}
+```
