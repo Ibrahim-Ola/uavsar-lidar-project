@@ -85,10 +85,12 @@ mkdir data
 
 ### 6. Download Data
 
-1. Download the remote sensing data into the `data` folder using this [link](https://drive.google.com/drive/folders/1Oalh_TooAk3PzQaBbyIwcWffLVaIEkuR?usp=sharing).
+1. Download the remote sensing dataset into the `data` folder using this [link](https://drive.google.com/drive/folders/1Oalh_TooAk3PzQaBbyIwcWffLVaIEkuR?usp=sharing).
+
+2. Download the *in situ* data following these steps:
 
 
-### 6. Deactivate Environment
+### 7. Deactivate Environment
 
 After running the experiments, you can deactivate the virtual environment by running the command below.
 
