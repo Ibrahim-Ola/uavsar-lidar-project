@@ -1,6 +1,9 @@
 
 # Snow Depth Prediction using L-Band InSAR Products
 
+[![DOI:10.3389/frsen.2024.1481848](https://img.shields.io/badge/DOI-10.3389%2Ffrsen.2024.1481848-blue.svg)](https://doi.org/10.3389/frsen.2024.1481848)
+
+
 ## Overview
 
 This work serves as a proof-of-concept that InSAR products can be used to estimate total snow depth through Machine Learning. This repository contains the code used to generate all results in our paper "*Advancing Terrestrial Snow Depth Monitoring with Machine Learning and L-band InSAR data: A Case Study Using SnowEx 2017 Data*" (doi: https://doi.org/10.3389/frsen.2024.1481848).
