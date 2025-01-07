@@ -115,7 +115,8 @@ We would appreciate citations if you use our code in your work.
   volume={5},
   pages={1481848},
   year={2025},
-  publisher={Frontiers}
+  publisher={Frontiers},
+  doi={10.3389/frsen.2024.1481848}
 }
 ```
 
