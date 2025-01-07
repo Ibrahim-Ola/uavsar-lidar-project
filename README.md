@@ -83,7 +83,9 @@ Create the data folder using the command below.
 mkdir data
 ```
 
-Download the dataset into the `data` folder by following the links in the `Dataset` section above.
+### 6. Download Data
+
+1. Download the remote sensing data into the `data` folder using this [link](https://drive.google.com/drive/folders/1Oalh_TooAk3PzQaBbyIwcWffLVaIEkuR?usp=sharing).
 
 
 ### 6. Deactivate Environment
