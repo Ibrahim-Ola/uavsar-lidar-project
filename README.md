@@ -89,6 +89,11 @@ mkdir data
 
 2. Download the *in situ* data following these steps:
 
+    * Create the folder to put the dataset:
+    ```bash
+    mkdir data/SNOWEX
+    ```
+
 
 ### 7. Deactivate Environment
 
