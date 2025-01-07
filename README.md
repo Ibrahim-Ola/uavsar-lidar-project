@@ -3,7 +3,7 @@
 
 ## Overview
 
-This work serves as a proof-of-concept that InSAR products can be used to estimate total snow depth through Machine Learning. This repository contains the code used to generate all results in our paper (doi: https://doi.org/10.3389/frsen.2024.1481848).
+This work serves as a proof-of-concept that InSAR products can be used to estimate total snow depth through Machine Learning. This repository contains the code used to generate all results in our paper "*Advancing Terrestrial Snow Depth Monitoring with Machine Learning and L-band InSAR data: A Case Study Using SnowEx 2017 Data*" (doi: https://doi.org/10.3389/frsen.2024.1481848).
 
 ## Dataset
 
