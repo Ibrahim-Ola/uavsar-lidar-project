@@ -1,7 +1,7 @@
 
 # Snow Depth Prediction using L-Band InSAR Products
 
-[![DOI:10.3389/frsen.2024.1481848](https://img.shields.io/badge/DOI-10.3389%2Ffrsen.2024.1481848-blue.svg)](https://doi.org/10.3389/frsen.2024.1481848)
+[![DOI](https://img.shields.io/badge/DOI-10.3389/frsen.2024.1481848-blue.svg)](https://doi.org/10.3389/frsen.2024.1481848)
 
 
 ## Overview
