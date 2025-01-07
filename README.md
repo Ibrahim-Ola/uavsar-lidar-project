@@ -65,8 +65,8 @@ If these instructions doesn't work for you (Windows users), you may need change 
 ### 3. Clone the Repository
 
 ```bash
-git clone https://github.com/Ibrahim-Ola/uavsar-lidar-project.git
-cd uavsar-lidar-project
+git clone git@github.com:cryogars/uavsar-lidar-ml-project.git
+cd uavsar-lidar-ml-project
 ```
 
 ### 4. Install Source Code
