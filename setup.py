@@ -1,7 +1,7 @@
 
 from setuptools import setup, find_packages
 
-PROJNAME = "uavsar-lidar-project"
+PROJNAME = "uavsar-lidar-ml-project"
 DESCRIPTION = "A project that uses NASA JPL UAVSAR data to predict total snow depth."
 with open("README.md") as f:
     LONG_DESCRIPTION = f.read()
@@ -10,9 +10,9 @@ MAINTAINER = "Ibrahim Olalekan Alabi"
 MAINTAINER_EMAIL = "ibrahimolalekana@u.boisestate.edu"
 URL = "https://github.com/Ibrahim-Ola/uavsar-lidar-project.git"
 PROJECT_URLS = {
-    "Bug Tracker": "https://github.com/Ibrahim-Ola/uavsar-lidar-project/issues",
-    "Documentation": "https://github.com/Ibrahim-Ola/uavsar-lidar-project/blob/main/README.md",
-    "Source Code": "https://github.com/Ibrahim-Ola/uavsar-lidar-project",
+    "Bug Tracker": "https://github.com/cryogars/uavsar-lidar-ml-project/issues",
+    "Documentation": "https://github.com/cryogars/uavsar-lidar-ml-project/blob/main/README.md",
+    "Source Code": "https://github.com/cryogars/uavsar-lidar-ml-project",
 }
 VERSION = "0.0.1"
 LICENSE = "MIT"
