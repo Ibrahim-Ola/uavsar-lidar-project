@@ -98,12 +98,12 @@ mkdir data
     * Dowlond the *in situ* measurement from [NSIDC](https://nsidc.org/data/snex17_sd/versions/1). When you land at the page navigate to `Data Access Tool` -> `Get Data` and click `Download Script`. At the time of writing,  `Download Script` is on the botton right of the page and the downloaded script is named `nsidc-download_SNEX17_SD.001_2025-01-07.py`.
 
     * Run the Python script to download the *in situ* data using:
-      ```bash
+    ```bash
     python nsidc-download_SNEX17_SD.001_2025-01-07.py
     ```
 
     * Move back to the parent directory and run the codes. Note that you will need `Jupyter Notebook` installed.
-      ```bash
+    ```bash
     cd ../..
     ```
 
