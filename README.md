@@ -60,7 +60,7 @@ pip install --upgrade pip
 
 If these instructions doesn't work for you (Windows users), you may need change the execution policy of your computer. To do this, run the PowerShell program as an administrator and run `Set ExecutionPolicy Unrestricted`. Afterwards, exit and reopen the PowerShell program (not as an administrator) then type commands in 2.2. 
 
-**Note: the Windows installation guide has not been tested and the code was not tested on a Windows machine!** 
+**Note: the Windows installation guide has not been tested and the entire codebase was not tested on a Windows machine!** 
 
 ### 3. Clone the Repository
 
