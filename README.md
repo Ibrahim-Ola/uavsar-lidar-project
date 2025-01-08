@@ -95,7 +95,7 @@ mkdir data
     cd data/SNOWEX
     ```
 
-    * Dowlond the *in situ* measurement from [NSIDC](https://nsidc.org/data/snex17_sd/versions/1). When you land at the page navigate to `Data Access Tool` -> `Get Data` and click `Download Script`. At the time of writing,  `Download Script` is on the botton right of the page and the downloaded script is named `nsidc-download_SNEX17_SD.001_2025-01-07.py`.
+    * Dowlond the *in situ* measurement from [NSIDC](https://nsidc.org/data/snex17_sd/versions/1). When you land at the page navigate to `Data Access Tool` -> `Get Data` and click `Download Script`. At the time of writing,  `Download Script` is on the botton right of the page and the downloaded script is named `nsidc-download_SNEX17_SD.001_2025-01-07.py`. Note that you will need  Earthdata username and password to download the *in situ* measurements. Click [here](https://urs.earthdata.nasa.gov/users/new) to register.
 
     * Run the Python script to download the *in situ* data using:
     ```bash
