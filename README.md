@@ -13,7 +13,7 @@ This work serves as a proof-of-concept that InSAR products can be used to estima
 This work uses dataset from the 2017 NASA SnowEx Campaign. The InSAR data is from NASA JPL's UAVSAR sensor, and the Lidar Depth is from ASO. 
 
 * Link to the remote sensing data we used: [link](https://drive.google.com/drive/folders/1Oalh_TooAk3PzQaBbyIwcWffLVaIEkuR?usp=sharing).
-* Link to the ground in-situ data: [NSIDC](https://nsidc.org/data/snex17_sd/versions/1).
+* Link to the ground *in situ* data: [NSIDC](https://nsidc.org/data/snex17_sd/versions/1).
 
 
 ## Software and hardware list
@@ -89,9 +89,22 @@ mkdir data
 
 2. Download the *in situ* data following these steps:
 
-    * Create the folder to put the dataset:
+    * Create the folder to put the *in situ* measurement and change directory:
     ```bash
     mkdir data/SNOWEX
+    cd data/SNOWEX
+    ```
+
+    * Dowlond the *in situ* measurement from [NSIDC](https://nsidc.org/data/snex17_sd/versions/1). When you land at the page navigate to `Data Access Tool` -> `Get Data` and click `Download Script`. At the time of writing,  `Download Script` is on the botton right of the page and the downloaded script is named `nsidc-download_SNEX17_SD.001_2025-01-07.py`.
+
+    * Run the Python script to download the *in situ* data using:
+      ```bash
+    python nsidc-download_SNEX17_SD.001_2025-01-07.py
+    ```
+
+    * Move back to the parent directory and run the codes. Note that you will need `Jupyter Notebook` installed.
+      ```bash
+    cd ../..
     ```
 
 
@@ -105,7 +118,7 @@ deactivate
 
 ## Acknowledgements
 
-- We would like to express our gratitude to the NASA Terrestrial Hydrology Program and all participants of the SnowEx campaign for providing the Lidar and in-situ data. 
+- We would like to express our gratitude to the NASA Terrestrial Hydrology Program and all participants of the SnowEx campaign for providing the Lidar and *in situ* data. 
 
 - We also thank Yunling Lou - the UAVSAR Project Manager at NASA JPL - for the UAVSAR data. 
 
