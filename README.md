@@ -130,15 +130,15 @@ deactivate
 We would appreciate citations if you use our code in your work.
 
 ```bash
-@article{alabi5advancing,
-  title={Advancing Terrestrial Snow Depth Monitoring with Machine Learning and L-band InSAR Data: A Case Study Using SnowEx 2017 Data},
-  author={Alabi, Ibrahim Olalekan and Marshall, Hans-Peter and Mead, Jodi and Trujillo, Ernesto},
-  journal={Frontiers in Remote Sensing},
-  volume={5},
-  pages={1481848},
-  year={2025},
-  publisher={Frontiers},
-  doi={10.3389/frsen.2024.1481848}
+@ARTICLE{alabi5advancing,
+    AUTHOR={Alabi, Ibrahim Olalekan  and Marshall, Hans-Peter  and Mead, Jodi  and Trujillo, Ernesto },
+    TITLE={Advancing terrestrial snow depth monitoring with machine learning and L-band InSAR data: a case study using NASA’s SnowEx 2017 data},
+    JOURNAL={Frontiers in Remote Sensing},
+    VOLUME={5},
+    YEAR={2025},
+    URL={https://www.frontiersin.org/journals/remote-sensing/articles/10.3389/frsen.2024.1481848},
+    DOI={10.3389/frsen.2024.1481848},
+    ISSN={2673-6187}
 }
 ```
 
